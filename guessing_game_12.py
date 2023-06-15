@@ -8,7 +8,7 @@ def difficulty_level(guess, round_rand_int, no_of_turns):
         print("Too low, try again!")
         return no_of_turns - 1
     elif guess == round_rand_int:
-        print(f"You guessed right, the answer was {rand_int}")
+        print(f"You guessed right, the answer was {round_rand_int}")
     else:
         print("Invalid input")
         exit()
