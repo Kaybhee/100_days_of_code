@@ -34,12 +34,18 @@ while game_is_on:
     # To create when the snake collides with a food
     if snake.head.distance(food) < 15:
         food.change_food_location()
+        snake.extend()
         score_board.increase_score()
+        
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_is_on = False
         score_board.hit_barrier()
-
-
+    for segments in snake.new_segment:
+        if segments == snake.head:
+            pass
+        elif snake.head.distance(segments) <= 15:
+            game_is_on = False
+            score_board.hit_barrier()
 
 
 
