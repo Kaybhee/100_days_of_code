@@ -23,11 +23,13 @@ while len(right_guess) < 40:
         t.goto(int(state_row["x"]), int(state_row["y"]))
         t.write(state_row["state"].item())
     if state_name == "exit":
-        missing_states = []
-        for states in list_states:
-            if states not in right_guess:
-                missing_states.append(states)
-                print(missing_states)
+        missing_states = [states for states in list_states if states not in right_guess]
+        print(missing_states)
+        # missing_states = []
+        # for states in list_states:
+        #     if states not in right_guess:
+        #         missing_states.append(states)
+        #         print(missing_states)
         df = pd.DataFrame(missing_states)
         df.to_csv("States_to_learn.csv")
 
