@@ -19,3 +19,6 @@ class ScoreBoard(Turtle):
         self.clear()
         self.update_scoreboard()
 
+    def hit_barrier(self):
+        self.goto(0,0)
+        self.write("GAME OVER", move = False, align = ALIGN, font = FONT )
