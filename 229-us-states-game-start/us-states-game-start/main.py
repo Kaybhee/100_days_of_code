@@ -1,7 +1,7 @@
 import turtle
 import pandas as pd
 screen = turtle.Screen()
-image = r"C:\Users\intern2\Videos\100_days_of_code\229-us-states-game-start\us-states-game-start\blank_states_img.gif"
+image = r"C:\Users\HP\Videos\100_days_of_code\229-us-states-game-start\us-states-game-start\blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
@@ -10,7 +10,7 @@ while len(right_guess) < 40:
     state_name = screen.textinput(title = f"Guess {len(right_guess)}/50 state", prompt = "Which state name do you know?" )
     # answer = print(state_name)
 
-    data = pd.read_csv(r"C:\Users\intern2\Videos\100_days_of_code\229-us-states-game-start\us-states-game-start\50_states.csv")
+    data = pd.read_csv(r"C:\Users\HP\Videos\100_days_of_code\229-us-states-game-start\us-states-game-start\50_states.csv")
     # if data[data["state"] == "answer"]:
     #     turtle.goto(data[["x", "y"]])
     list_states = data["state"].to_list()
