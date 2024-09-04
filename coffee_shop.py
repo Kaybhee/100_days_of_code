@@ -29,8 +29,9 @@ resources = {
 }
 do_continue = False
 while not do_continue:
-    coffee_type = input("What would you like? (espresso/latte/cappuccino): "
+    coffee_type = input("What would you like? (espresso/latte/cappuccino):")
     if coffee_type == "off":
-    do_continue = True
-    elif 
+        do_continue = True
+    elif coffee_type == "espresso":
+         
 print(MENU)

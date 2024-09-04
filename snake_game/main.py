@@ -25,7 +25,7 @@ game_is_on = True
 while game_is_on:
     score = 0
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.2)
     # for move_fd in new_segment:
     #     move_fd.forward(20)
     #     new_segment[0].rt(90)
